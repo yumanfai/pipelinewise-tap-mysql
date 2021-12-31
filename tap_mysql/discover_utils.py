@@ -251,7 +251,7 @@ def schema_for_column(column):  # pylint: disable=too-many-branches
 
     result = Schema(inclusion=inclusion)
 
-    if data_type in BOOL_TYPES or column_type.startswith('tinyint(1)'):
+    if data_type in BOOL_TYPES:
         result.type = ['null', 'boolean']
 
     elif data_type in BYTES_FOR_INTEGER_TYPE:
